@@ -1,0 +1,29 @@
+GitHub Actions Workflow: build
+Status: SUCCESS
+
+Repository: Yassir-gorfty/cicd-openshift-project
+Runner: ubuntu-latest
+
+Step: Checkout code
+Action: actions/checkout@v3
+Status: Success
+
+Step: Set up Python
+Action: actions/setup-python@v4
+Python version: 3.9
+Status: Success
+
+Step: Install dependencies
+Command: pip install flake8 nose
+Status: Success
+
+Step: Lint with flake8
+Command: flake8 .
+Status: Success
+
+Step: Run unit tests with nose
+Command: nose
+Result: Tests ran successfully
+Status: Success
+
+Workflow completed successfully.
